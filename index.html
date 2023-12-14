@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate tha area of a Triangle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Triangle Area Calculator</h1>
+      
+        <div class="text"> 
+              <label for="v1"> Enter Tha Base Of Tha Triangle:</label>
+              <input type="number" id="v1"><br> <br>
+              <label for="v2"> Enter Tha Hight Of Tha Triangle:</label>
+              <input type="number" id="v2">
+       </div>
+    
+      <div class="btn"> 
+       <input type="button"  id="enter" value="calculate" onclick="calculateArea()">
+      
+      </div>
+     <div class="text"> 
+      <p id="sum"></p>
+     </div>
+  </div>
+<script>
+   function calculateArea(){
+    var num1=parseFloat(document.getElementById("v1").value)
+       var num2=parseFloat(document.getElementById("v2").value)
+
+      //var area=1/2*num1*num2
+    //  document.getElementById("sum").innerHTML=`Tha Area Of Tha Triangle Is:${area}`
+      if(!isNaN(num1) ||!isNaN(num2)){
+        var area=1/2*num1*num2
+      document.getElementById("sum").innerHTML=`Tha Area Of Tha Triangle Is:${area}`
+     }
+     else{
+        document.getElementById("sum").innerText="Plase enter a valid number"
+     }
+}
+
+</script>
+</body>
+</html>
